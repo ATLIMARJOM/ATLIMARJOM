@@ -957,6 +957,10 @@ textarea.form-control {
    RESPONSIVE DESIGN (MEDIA QUERIES)
    ========================================== */
 @media (max-width: 992px) {
+  .header .btn {
+    display: none;
+  }
+
   .hero-grid {
     grid-template-columns: 1fr;
     gap: 3rem;
@@ -980,12 +984,35 @@ textarea.form-control {
 }
 
 @media (max-width: 768px) {
-  .nav-menu {
+  .header .btn {
     display: none;
   }
 
   .mobile-toggle {
     display: block;
+    color: #ffffff;
+    cursor: pointer;
+  }
+
+  /* Escondido por padrão no celular */
+  .nav-menu {
+    display: none;
+    position: absolute;
+    top: 80px;
+    /* logo abaixo do header */
+    left: 0;
+    width: 100%;
+    background-color: var(--primary-dark);
+    flex-direction: column;
+    padding: 1.5rem 2rem;
+    gap: 1.25rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    z-index: 999;
+  }
+
+  /* Exibido quando o JS adiciona a classe 'active' */
+  .nav-menu.active {
+    display: flex;
   }
 
   .hero-title {
