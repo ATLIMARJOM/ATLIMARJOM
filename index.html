@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Site oficial da ATLIMARJOM - Associação dos Catadores de Material Reciclável de João Monlevade. Notícias, serviços de reciclagem, pontos de coleta e impacto socioambiental.">
+  <title>ATLIMARJOM - Associação dos Catadores de João Monlevade</title>
+
+  <!-- Estilos principais -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- ==========================================
+       CABEÇALHO E NAVEGAÇÃO
+       ========================================== -->
+  <header class="header">
+    <div class="container nav-container">
+      <a href="#inicio" class="logo">
+        <img src="logo.png" alt="Logo ATLIMARJOM" class="logo-icon">
+        <div class="logo-text">
+          ATLIMARJOM
+          <span class="logo-sub">João Monlevade - MG</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu" id="navMenu">
+        <a href="#inicio" class="nav-link active">Início</a>
+        <a href="#sobre" class="nav-link">Sobre Nós</a>
+        <a href="#materiais" class="nav-link">O Que Reciclamos</a>
+        <a href="#noticias" class="nav-link">Notícias</a>
+        <a href="#apoie" class="nav-link">Como Apoiar</a>
+        <a href="#contato" class="nav-link">Contato</a>
+      </nav>
+
+      <div style="display: flex; gap: 0.75rem; align-items: center;">
+        <a href="#apoie" class="btn btn-primary">Como Doar</a>
+        <button class="mobile-toggle" aria-label="Abrir Menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================
+       SEÇÃO HERO / PRINCIPAL
+       ========================================== -->
+  <section id="inicio" class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <h1 class="hero-title">
+            Transformando resíduos em <span>dignidade e sustentabilidade</span>.
+          </h1>
+
+          <p class="hero-description">
+            A ATLIMARJOM une a força dos catadores de materiais recicláveis para construir uma cidade mais limpa,
+            promovendo a preservação ambiental e a valorização do trabalho comunitário.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#apoie" class="btn btn-primary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                  d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                </path>
+              </svg>
+              Entrega de Recicláveis
+            </a>
+            <a href="#sobre" class="btn btn-secondary">Conheça Nossa História</a>
+          </div>
+
+          <div class="hero-stats-row">
+            <div class="stat-item">
+              <h3>+120 T</h3>
+              <p>Recicladas por mês</p>
+            </div>
+            <div class="stat-item">
+              <h3>+45</h3>
+              <p>Famílias beneficiadas</p>
+            </div>
+            <div class="stat-item">
+              <h3>100%</h3>
+              <p>Compromisso local</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-card-main">
+            <div class="hero-illustration">
+              <svg class="hero-illustration-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.5">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                <path d="M12 8v8"></path>
+                <path d="M8 12h8"></path>
+              </svg>
+              <h3 style="color: #ffffff; font-size: 1.3rem; margin-bottom: 0.5rem;">Central de Triagem</h3>
+              <p style="color: rgba(255,255,255,0.8); font-size: 0.9rem; max-width: 260px;">
+                Processando papel, plástico, vidro e metal com responsabilidade ambiental em Monlevade.
+              </p>
+            </div>
+
+            <div class="hero-floating-badge">
+              <div class="floating-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                </svg>
+              </div>
+              <div>
+                <strong style="display: block; font-size: 0.95rem; color: var(--primary-dark);">Economia
+                  Circular</strong>
+                <span style="font-size: 0.8rem; color: var(--text-muted);">Geração de renda direta</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       SEÇÃO SOBRE NÓS
+       ========================================== -->
+  <section id="sobre" class="section">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-card-bg">
+          <span class="badge" style="margin-bottom: 1rem;">Nossa Identidade</span>
+          <h2 class="section-title" style="text-align: left; margin-top: 0.5rem;">Trabalho com propósito e respeito ao
+            meio ambiente</h2>
+          <p style="margin-bottom: 1.25rem;">
+            A <strong>ATLIMARJOM</strong> é a Associação dos Catadores de Material Reciclável de João Monlevade. Atuamos
+            na linha de frente da sustentabilidade urbana, organizando a coleta, triagem e destinação adequada de
+            resíduos recicláveis.
+          </p>
+          <p>
+            Nosso trabalho reduz a quantidade de lixo enviada aos aterros, economiza recursos naturais e garante
+            oportunidade de trabalho digno e remuneração justa para dezenas de catadores da nossa região.
+          </p>
+        </div>
+
+        <div class="about-feature-list">
+          <div class="feature-item">
+            <div class="feature-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+            </div>
+            <div class="feature-info">
+              <h4>Triagem Qualificada</h4>
+              <p>Classificação criteriosa de papéis, plásticos, vidros e sucatas metálicas para envio às indústrias
+                recicladoras.</p>
+            </div>
+          </div>
+
+          <div class="feature-item">
+            <div class="feature-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+            </div>
+            <div class="feature-info">
+              <h4>Inclusão Socioeconômica</h4>
+              <p>Fortalecimento do protagonismo dos catadores e garantia de direitos e segurança no trabalho diário.</p>
+            </div>
+          </div>
+
+          <div class="feature-item">
+            <div class="feature-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="8" x2="12" y2="12"></line>
+                <line x1="12" y1="16" x2="12.01" y2="16"></line>
+              </svg>
+            </div>
+            <div class="feature-info">
+              <h4>Conscientização Comunitária</h4>
+              <p>Ações educativas em escolas, bairros e empresas de João Monlevade para incentivar o descarte correto.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       SEÇÃO O QUE RECICLAMOS
+       ========================================== -->
+  <section id="materiais" class="section"
+    style="background-color: #ffffff; border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge">Guia de Separação</span>
+        <h2 class="section-title">O que reciclamos na ATLIMARJOM</h2>
+        <p class="section-subtitle">
+          Saiba quais materiais você pode separar na sua casa ou empresa em João Monlevade para doar à nossa associação.
+        </p>
+      </div>
+
+      <div class="materials-grid">
+        <!-- Card Papel -->
+        <div class="material-card">
+          <div class="material-icon-wrap mat-papel">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <line x1="16" y1="13" x2="8" y2="13"></line>
+              <line x1="16" y1="17" x2="8" y2="17"></line>
+            </svg>
+          </div>
+          <h3 class="material-title">Papel & Papelão</h3>
+          <p class="material-desc">Caixas dobradas, jornais, revistas, folhas de rascunho e embalagens de papelão
+            limpas.</p>
+        </div>
+
+        <!-- Card Plástico -->
+        <div class="material-card">
+          <div class="material-icon-wrap mat-plastico">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M6 2L18 2L18 6L6 6Z"></path>
+              <path d="M6 6L6 20C6 21.1 6.9 22 8 22L16 22C17.1 22 18 21.1 18 20L18 6"></path>
+              <line x1="10" y1="11" x2="14" y2="11"></line>
+            </svg>
+          </div>
+          <h3 class="material-title">Plásticos</h3>
+          <p class="material-desc">Garrafas PET, frascos de produto de limpeza, tampas, potes e sacolas plásticas.</p>
+        </div>
+
+        <!-- Card Vidro -->
+        <div class="material-card">
+          <div class="material-icon-wrap mat-vidro">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M8 2h8l1 7v11a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2V9l1-7z"></path>
+              <line x1="7" y1="9" x2="17" y2="9"></line>
+            </svg>
+          </div>
+          <h3 class="material-title">Vidros</h3>
+          <p class="material-desc">Garrafas de bebidas, potes de conserva e frascos inteiros (higienizados e seguros).
+          </p>
+        </div>
+
+        <!-- Card Metal -->
+        <div class="material-card">
+          <div class="material-icon-wrap mat-metal">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+              <circle cx="8.5" cy="8.5" r="1.5"></circle>
+              <circle cx="15.5" cy="15.5" r="1.5"></circle>
+            </svg>
+          </div>
+          <h3 class="material-title">Metais</h3>
+          <p class="material-desc">Latas de alumínio, embalagens de aço, tampinhas de garrafa e pequenas sucatas.</p>
+        </div>
+
+        <!-- Card Eletrônicos -->
+        <div class="material-card">
+          <div class="material-icon-wrap mat-eletronico">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="4" y="4" width="16" height="12" rx="2"></rect>
+              <line x1="12" y1="16" x2="12" y2="20"></line>
+              <line x1="8" y1="20" x2="16" y2="20"></line>
+            </svg>
+          </div>
+          <h3 class="material-title">E-lixo & Fios</h3>
+          <p class="material-desc">Fios de eletrodomésticos, gabinetes, aparelhos antigos e pequenos eletrônicos.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       SEÇÃO NOTÍCIAS E ATUALIZAÇÕES
+       ========================================== -->
+  <section id="noticias" class="section news-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge">Informativo</span>
+        <h2 class="section-title">Notícias e Comunicados</h2>
+        <p class="section-subtitle">
+          Acompanhe as últimas novidades, projetos e eventos da associação em João Monlevade.
+        </p>
+      </div>
+
+      <div class="news-grid">
+        <!-- Notícia 1 -->
+        <article class="news-card">
+          <div class="news-image">
+            <span class="news-tag">Conquista</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path
+                d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+              </path>
+            </svg>
+          </div>
+          <div class="news-content">
+            <div class="news-date">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+              </svg>
+              04 de Agosto, 2026
+            </div>
+            <h3 class="news-card-title">
+              <a href="#">ATLIMARJOM fortalece capacidade de prensa de materiais recicláveis</a>
+            </h3>
+            <p class="news-excerpt">
+              Com novos equipamentos no galpão, a associação amplia o volume diário de enfardamento de papelão e
+              plásticos, otimizando o envio às indústrias.
+            </p>
+            <a href="#" class="news-read-more">
+              Ler notícia completa
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Notícia 2 -->
+        <article class="news-card">
+          <div class="news-image">
+            <span class="news-tag">Comunidade</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+            </svg>
+          </div>
+          <div class="news-content">
+            <div class="news-date">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+              </svg>
+              26 de Julho, 2026
+            </div>
+            <h3 class="news-card-title">
+              <a href="#">Oficinas de Educação Ambiental para alunos das escolas de Monlevade</a>
+            </h3>
+            <p class="news-excerpt">
+              Integrantes da associação realizaram palestras explicativas sobre a relevância da separação correta do
+              lixo seco nas residências.
+            </p>
+            <a href="#" class="news-read-more">
+              Ler notícia completa
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Notícia 3 -->
+        <article class="news-card">
+          <div class="news-image">
+            <span class="news-tag">Parcerias</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+              <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+            </svg>
+          </div>
+          <div class="news-content">
+            <div class="news-date">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+              </svg>
+              12 de Julho, 2026
+            </div>
+            <h3 class="news-card-title">
+              <a href="#">Programa Recicla Comércio impulsiona adesão de empresas locais</a>
+            </h3>
+            <p class="news-excerpt">
+              Lojas e escritórios do centro comercial de João Monlevade passam a destinar papéis e embalagens
+              diretamente à ATLIMARJOM.
+            </p>
+            <a href="#" class="news-read-more">
+              Ler notícia completa
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       SEÇÃO COMO APOIAR
+       ========================================== -->
+  <section id="apoie" class="section">
+    <div class="container">
+      <div class="support-banner">
+        <div class="support-content">
+          <span class="badge"
+            style="background-color: rgba(255,255,255,0.2); color: #ffffff; border: none; margin-bottom: 1rem;">
+            Faça sua Parte
+          </span>
+          <h2>Como contribuir com a ATLIMARJOM?</h2>
+          <p>
+            Pequenas atitudes no seu dia a dia fazem uma grande diferença para as famílias dos catadores e para a
+            preservação de João Monlevade.
+          </p>
+
+          <div class="support-steps">
+            <div class="step-card">
+              <div class="step-number">1</div>
+              <h4>Separe o Lixo Seco</h4>
+              <p>Separe papéis, plásticos, vidros e metais do lixo orgânico da sua cozinha ou banheiro.</p>
+            </div>
+
+            <div class="step-card">
+              <div class="step-number">2</div>
+              <h4>Limpe os Recipientes</h4>
+              <p>Passe uma água rápida nas embalagens para retirar resíduos de alimentos antes do descarte.</p>
+            </div>
+
+            <div class="step-card">
+              <div class="step-number">3</div>
+              <h4>Entregue na Associação</h4>
+              <p>Traga seus recicláveis ao nosso galpão central ou participe dos pontos de entrega nos bairros.</p>
+            </div>
+          </div>
+
+          <a href="#contato" class="btn btn-accent">Fale com Nossa Equipe para Agendar Coleta</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       SEÇÃO CONTATO E LOCALIZAÇÃO
+       ========================================== -->
+  <section id="contato" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge">Canais de Atendimento</span>
+        <h2 class="section-title">Entre em Contato Conosco</h2>
+        <p class="section-subtitle">
+          Dúvidas sobre descarte, agendamento de recolhimento para empresas ou parcerias? Fale com a ATLIMARJOM.
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Informações de Contato -->
+        <div class="contact-info-card">
+          <h3 style="font-size: 1.4rem; margin-bottom: 1.5rem; color: var(--primary-dark);">Endereço & Canais</h3>
+
+          <div class="info-item">
+            <div class="info-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <div class="info-text">
+              <h4>Localização</h4>
+              <p>Galpão de Triagem ATLIMARJOM<br>João Monlevade - MG, CEP 35930-000</p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                </path>
+              </svg>
+            </div>
+            <div class="info-text">
+              <h4>Telefone & WhatsApp</h4>
+              <p><a href="tel:+5531987654321">(31) 98765-4321</a></p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </div>
+            <div class="info-text">
+              <h4>E-mail</h4>
+              <p><a href="mailto:contato@atlimarjom.org.br">contato@atlimarjom.org.br</a></p>
+            </div>
+          </div>
+
+          <div class="info-item" style="margin-bottom: 0;">
+            <div class="info-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+            </div>
+            <div class="info-text">
+              <h4>Horário de Funcionamento</h4>
+              <p>Segunda a Sexta: 07:00 às 17:00</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Formulário Estático -->
+        <div class="contact-form-card">
+          <h3 style="font-size: 1.4rem; margin-bottom: 1.5rem; color: var(--primary-dark);">Envie uma Mensagem</h3>
+
+          <form action="#" method="POST"
+            onsubmit="event.preventDefault(); alert('Obrigado pelo contato! Esta é uma demonstração da página estática da ATLIMARJOM.');">
+            <div class="form-group">
+              <label for="nome" class="form-label">Seu Nome Completo</label>
+              <input type="text" id="nome" class="form-control" placeholder="Ex: Maria Silva" required>
+            </div>
+
+            <div class="form-group">
+              <label for="email" class="form-label">Seu E-mail</label>
+              <input type="email" id="email" class="form-control" placeholder="maria@exemplo.com" required>
+            </div>
+
+            <div class="form-group">
+              <label for="assunto" class="form-label">Assunto</label>
+
+              <select id="assunto" class="form-control">
+                <option value="doacao">Dúvida sobre Doação de Recicláveis</option>
+                <option value="parceria">Parceria de Empresa ou Comércio</option>
+                <option value="imprensa">Dúvidas / Imprensa / Geral</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="mensagem" class="form-label">Sua Mensagem</label>
+              <textarea id="mensagem" class="form-control" placeholder="Escreva sua mensagem aqui..."
+                required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%;">
+              Enviar Mensagem
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       RODAPÉ / FOOTER
+       ========================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#inicio" class="logo">
+            <img src="logo.png" alt="Logo ATLIMARJOM" class="logo-icon">
+            <div>
+              ATLIMARJOM
+              <span class="logo-sub">João Monlevade - MG</span>
+            </div>
+          </a>
+          <p>
+            Associação dos Catadores de Material Reciclável de João Monlevade. Promovendo sustentabilidade, inclusão e
+            cidadania desde a nossa fundação.
+          </p>
+          <div class="social-links">
+            <a href="#" class="social-icon" aria-label="Facebook">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+              </svg>
+            </a>
+            <a href="#" class="social-icon" aria-label="Instagram">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+            <a href="#" class="social-icon" aria-label="WhatsApp">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path
+                  d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">
+                </path>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-links">
+          <h4 class="footer-title">Navegação</h4>
+          <ul>
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#sobre">Sobre a ATLIMARJOM</a></li>
+            <li><a href="#materiais">Materiais Reciclados</a></li>
+            <li><a href="#noticias">Notícias & Informativos</a></li>
+            <li><a href="#contato">Fale Conosco</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h4 class="footer-title">Reciclagem</h4>
+          <ul>
+            <li><a href="#materiais">Papel e Papelão</a></li>
+            <li><a href="#materiais">Plásticos e PET</a></li>
+            <li><a href="#materiais">Vidros</a></li>
+            <li><a href="#materiais">Metais e Latas</a></li>
+            <li><a href="#materiais">Resíduos Eletrônicos</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Contato Rápido</h4>
+          <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem; margin-bottom: 0.5rem;">
+            Galpão Central de Triagem
+          </p>
+          <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem; margin-bottom: 0.5rem;">
+            João Monlevade - MG
+          </p>
+          <p style="color: var(--accent-lime); font-size: 0.9rem; font-weight: 600;">
+            (31) 98765-4321
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 ATLIMARJOM - Associação dos Catadores de Material Reciclável de João Monlevade. Todos os direitos
+          reservados.</p>
+        <p>Desenvolvido por <a href="https://github.com/luisfilipemendesnogueira" target="_blank"
+            style="font-weight: 700;">Luis Filipe</a>.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
