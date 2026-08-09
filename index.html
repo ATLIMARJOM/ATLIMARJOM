@@ -33,11 +33,12 @@
         <a href="#materiais" class="nav-link">O Que Reciclamos</a>
         <a href="#noticias" class="nav-link">Notícias</a>
         <a href="#apoie" class="nav-link">Como Apoiar</a>
-        <a href="#contato" class="nav-link">Contato</a>
+        <a href="#coleta" class="nav-link">Dias da Coleta</a>
+        <a href="#contato" class="nav-link">Fale Conosco</a>
       </nav>
 
       <div style="display: flex; gap: 0.75rem; align-items: center;">
-        <a href="#apoie" class="btn btn-primary">Como Doar</a>
+        <a href="#apoie" class="btn btn-primary">Como Ajudar</a>
         <button class="mobile-toggle" aria-label="Abrir Menu">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <line x1="3" y1="12" x2="21" y2="12"></line>
@@ -460,6 +461,236 @@
   </section>
 
   <!-- ==========================================
+       SEÇÃO DIAS E BAIRROS DA COLETA
+       ========================================== -->
+  <section id="coleta" class="section schedule-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge">Cronograma Semanal</span>
+        <h2 class="section-title">Dias e Bairros da Coleta Seletiva</h2>
+        <p class="section-subtitle">
+          Confira o dia da semana e faça sua parte em João Monlevade.<br>
+          <strong class="schedule-highlight-time">🚚 Os caminhões começam a circular a partir das 08h.</strong>
+        </p>
+      </div>
+
+      <!-- Campo de Busca Rápida de Bairro -->
+      <div class="neighborhood-search-container">
+        <div class="search-box-wrapper">
+          <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input type="text" id="neighborhoodSearch" class="neighborhood-search-input"
+            placeholder="Digite o nome do seu bairro para pesquisar (ex: Carneirinhos, Baú, Sion...)"
+            autocomplete="off">
+          <button type="button" id="clearSearch" class="clear-search-btn" aria-label="Limpar busca">&times;</button>
+        </div>
+        <div id="searchResultsCount" class="search-results-count"></div>
+      </div>
+
+      <!-- Grid dos Caminhões -->
+      <div class="trucks-wrapper">
+
+        <!-- ================= CAMINHÃO 1 ================= -->
+        <div class="truck-card">
+          <div class="truck-card-header header-truck-1">
+            <div class="truck-badge-title">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="1" y="3" width="15" height="13" rx="2"></rect>
+                <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                <circle cx="18.5" cy="18.5" r="2.5"></circle>
+              </svg>
+              <span>CAMINHÃO 1</span>
+            </div>
+            <span class="truck-sub-tag">Rota 01</span>
+          </div>
+
+          <div class="days-container">
+            <!-- Segunda-feira -->
+            <div class="day-card">
+              <div class="day-badge day-segunda">SEGUNDA-FEIRA</div>
+              <ul class="neighborhoods-list">
+                <li class="neighborhood-tag">Areia Preta</li>
+                <li class="neighborhood-tag">Vila Tanque</li>
+                <li class="neighborhood-tag">Baú</li>
+                <li class="neighborhood-tag">Laranjeiras</li>
+                <li class="neighborhood-tag">Metalúrgico</li>
+                <li class="neighborhood-tag">Belmonte</li>
+              </ul>
+            </div>
+
+            <!-- Terça-feira -->
+            <div class="day-card">
+              <div class="day-badge day-terca">TERÇA-FEIRA</div>
+              <ul class="neighborhoods-list">
+                <li class="neighborhood-tag">JK</li>
+                <li class="neighborhood-tag">Rosário</li>
+                <li class="neighborhood-tag">Mangabeiras</li>
+                <li class="neighborhood-tag">Vale do Sol</li>
+                <li class="neighborhood-tag">José Elói</li>
+                <li class="neighborhood-tag">São João</li>
+                <li class="neighborhood-tag">São Jorge</li>
+                <li class="neighborhood-tag">Castelo</li>
+                <li class="neighborhood-tag">São Benedito</li>
+              </ul>
+            </div>
+
+            <!-- Quarta-feira -->
+            <div class="day-card">
+              <div class="day-badge day-quarta">QUARTA-FEIRA</div>
+              <ul class="neighborhoods-list">
+                <li class="neighborhood-tag">Lucília</li>
+                <li class="neighborhood-tag">São Geraldo</li>
+                <li class="neighborhood-tag">Satélite de Baixo</li>
+                <li class="neighborhood-tag">Satélite de Cima</li>
+                <li class="neighborhood-tag">José de Alencar</li>
+                <li class="neighborhood-tag">Loanda</li>
+                <li class="neighborhood-tag">Vera Cruz</li>
+                <li class="neighborhood-tag">Palmares</li>
+                <li class="neighborhood-tag">ABM</li>
+              </ul>
+            </div>
+
+            <!-- Quinta-feira -->
+            <div class="day-card">
+              <div class="day-badge day-quinta">QUINTA-FEIRA</div>
+              <ul class="neighborhoods-list">
+                <li class="neighborhood-tag">Nossa Senhora da Conceição</li>
+                <li class="neighborhood-tag">Alvorada</li>
+                <li class="neighborhood-tag">Lourdes</li>
+                <li class="neighborhood-tag">República</li>
+                <li class="neighborhood-tag">Aclimação</li>
+                <li class="neighborhood-tag">Novo Horizonte</li>
+              </ul>
+            </div>
+
+            <!-- Sexta-feira -->
+            <div class="day-card">
+              <div class="day-badge day-sexta">SEXTA-FEIRA</div>
+              <ul class="neighborhoods-list">
+                <li class="neighborhood-tag">Carneirinhos</li>
+                <li class="neighborhood-tag">Empresas</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- ================= CAMINHÃO 2 ================= -->
+        <div class="truck-card">
+          <div class="truck-card-header header-truck-2">
+            <div class="truck-badge-title">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="1" y="3" width="15" height="13" rx="2"></rect>
+                <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                <circle cx="18.5" cy="18.5" r="2.5"></circle>
+              </svg>
+              <span>CAMINHÃO 2</span>
+            </div>
+            <span class="truck-sub-tag">Rota 02</span>
+          </div>
+
+          <div class="days-container">
+            <!-- Segunda-feira -->
+            <div class="day-card">
+              <div class="day-badge day-segunda">SEGUNDA-FEIRA</div>
+              <ul class="neighborhoods-list">
+                <li class="neighborhood-tag">Santo Hipólito</li>
+                <li class="neighborhood-tag">Teresópolis</li>
+                <li class="neighborhood-tag">Petrópolis</li>
+                <li class="neighborhood-tag">Nova Monlevade</li>
+              </ul>
+            </div>
+
+            <!-- Terça-feira -->
+            <div class="day-card">
+              <div class="day-badge day-terca">TERÇA-FEIRA</div>
+              <ul class="neighborhoods-list">
+                <li class="neighborhood-tag">Burian</li>
+                <li class="neighborhood-tag">Tanquinho 1</li>
+                <li class="neighborhood-tag">Tanquinho 2</li>
+                <li class="neighborhood-tag">Sion</li>
+                <li class="neighborhood-tag">Paineiras</li>
+                <li class="neighborhood-tag">Campos Elísios</li>
+                <li class="neighborhood-tag">Nova Esperança</li>
+                <li class="neighborhood-tag">Nova Aclimação</li>
+                <li class="neighborhood-tag">Cidade Nova</li>
+                <li class="neighborhood-tag">Boa Vista</li>
+                <li class="neighborhood-tag">Nova Cachoeirinha</li>
+                <li class="neighborhood-tag">Ponte Funda</li>
+                <li class="neighborhood-tag">Campo Alegre</li>
+              </ul>
+            </div>
+
+            <!-- Quarta-feira -->
+            <div class="day-card">
+              <div class="day-badge day-quarta">QUARTA-FEIRA</div>
+              <ul class="neighborhoods-list">
+                <li class="neighborhood-tag">Estrela Dalva</li>
+                <li class="neighborhood-tag">Santa Cecília</li>
+                <li class="neighborhood-tag">Cruzeiro Celeste</li>
+                <li class="neighborhood-tag">1º de Maio</li>
+                <li class="neighborhood-tag">Corumbiara de Vanessa</li>
+                <li class="neighborhood-tag">Monte Sagrado</li>
+              </ul>
+            </div>
+
+            <!-- Quinta-feira -->
+            <div class="day-card">
+              <div class="day-badge day-quinta">QUINTA-FEIRA</div>
+              <ul class="neighborhoods-list">
+                <li class="neighborhood-tag">Centro Industrial</li>
+                <li class="neighborhood-tag">Santa Cruz</li>
+                <li class="neighborhood-tag">Amazonas</li>
+                <li class="neighborhood-tag">Jacuí</li>
+                <li class="neighborhood-tag">Serra do Egito</li>
+                <li class="neighborhood-tag">Pedreira</li>
+                <li class="neighborhood-tag">Santa Bárbara</li>
+                <li class="neighborhood-tag">Vale da Serra</li>
+                <li class="neighborhood-tag">Recanto Paraíso</li>
+                <li class="neighborhood-tag">Industrial</li>
+                <li class="neighborhood-tag">Ipiranga</li>
+              </ul>
+            </div>
+
+            <!-- Sexta-feira -->
+            <div class="day-card">
+              <div class="day-badge day-sexta">SEXTA-FEIRA</div>
+              <ul class="neighborhoods-list">
+                <li class="neighborhood-tag">Novo Cruzeiro</li>
+                <li class="neighborhood-tag">Ernestina Graciana</li>
+                <li class="neighborhood-tag">Promorar</li>
+                <li class="neighborhood-tag">Planalto</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Banner Informativo Adicional -->
+      <div class="schedule-notice-banner">
+        <div class="notice-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="12" y1="16" x2="12" y2="12"></line>
+            <line x1="12" y1="8" x2="12.01" y2="8"></line>
+          </svg>
+        </div>
+        <div class="notice-text">
+          <strong>Importante:</strong> Coloque seus materiais recicláveis limpos e secos na calçada no dia marcado para
+          o seu bairro.
+          <br>
+          Iniciativa da <strong>ATLIMARJOM</strong> em parceria com a <strong>Prefeitura de João Monlevade</strong>.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
        SEÇÃO CONTATO E LOCALIZAÇÃO
        ========================================== -->
   <section id="contato" class="section">
@@ -590,27 +821,28 @@
           </a>
           <p>
             Associação dos Trabalhadores de Limpeza e Materiais Recicláveis de João Monlevade. Promovendo
-            sustentabilidade, inclusão e
-            cidadania desde a nossa fundação.
+            sustentabilidade, inclusão e cidadania desde 2001.
           </p>
           <div class="social-links">
-            <a href="#" class="social-icon" aria-label="Facebook">
+            <a href="https://www.facebook.com/atlimarjomreciclagemjm/" target="_blank" rel="noopener noreferrer"
+              class="social-icon" aria-label="Facebook">
               <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
-              </svg>
-            </a>
-            <a href="#" class="social-icon" aria-label="Instagram">
-              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-              </svg>
-            </a>
-            <a href="#" class="social-icon" aria-label="WhatsApp">
-              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                 <path
-                  d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">
-                </path>
+                  d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+              </svg>
+            </a>
+            <a href="https://www.instagram.com/atlimarjom_reciclagem_jm/" target="_blank" rel="noopener noreferrer"
+              class="social-icon" aria-label="Instagram">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+              </svg>
+            </a>
+            <a href="https://wa.me/5531987630181" target="_blank" rel="noopener noreferrer" class="social-icon"
+              aria-label="WhatsApp">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
               </svg>
             </a>
           </div>
@@ -620,9 +852,11 @@
           <h4 class="footer-title">Navegação</h4>
           <ul>
             <li><a href="#inicio">Início</a></li>
-            <li><a href="#sobre">Sobre a ATLIMARJOM</a></li>
-            <li><a href="#materiais">Materiais Reciclados</a></li>
-            <li><a href="#noticias">Notícias & Informativos</a></li>
+            <li><a href="#sobre">Sobre Nós</a></li>
+            <li><a href="#materiais">O Que Reciclamos</a></li>
+            <li><a href="#noticias">Notícias</a></li>
+            <li><a href="#coleta">Dias da Coleta</a></li>
+            <li><a href="#apoie">Como Apoiar</a></li>
             <li><a href="#contato">Fale Conosco</a></li>
           </ul>
         </div>
@@ -634,30 +868,34 @@
             <li><a href="#materiais">Plásticos e PET</a></li>
             <li><a href="#materiais">Vidros</a></li>
             <li><a href="#materiais">Metais e Latas</a></li>
-            <li><a href="#materiais">Resíduos Eletrônicos</a></li>
+            <li><a href="#materiais">Eletrodomésticos e Eletrônicos</a></li>
           </ul>
         </div>
 
         <div>
           <h4 class="footer-title">Contato Rápido</h4>
-          <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem; margin-bottom: 0.5rem;">
-            Galpão Central de Triagem
+          <p style="color: rgba(255,255,255,0.8); font-size: 0.9rem; margin-bottom: 0.4rem;">
+            <strong>Galpão Central:</strong><br>
+            Av. Getúlio Vargas, 2.195 - Bairro Baú<br>João Monlevade - MG
           </p>
-          <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem; margin-bottom: 0.5rem;">
-            João Monlevade - MG
+          <p style="color: rgba(255,255,255,0.8); font-size: 0.9rem; margin-bottom: 0.4rem; margin-top: 0.75rem;">
+            <strong>Telefones:</strong><br>
+            <a href="tel:+553138511813" style="color: rgba(255,255,255,0.9);">(31) 3851-1813</a> /
+            <a href="https://wa.me/5531987630181" target="_blank"
+              style="color: var(--accent-lime); font-weight: 600;">(31) 98763-0181</a>
           </p>
-          <p style="color: var(--accent-lime); font-size: 0.9rem; font-weight: 600;">
-            (31) 98765-4321
+          <p style="color: rgba(255,255,255,0.8); font-size: 0.88rem; margin-top: 0.5rem;">
+            <a href="mailto:atlimarjom@catavales.com.br"
+              style="color: rgba(255,255,255,0.9);">atlimarjom@catavales.com.br</a>
           </p>
         </div>
       </div>
 
       <div class="footer-bottom">
         <p>&copy; 2026 ATLIMARJOM - Associação dos Trabalhadores de Limpeza e Materiais Recicláveis de João Monlevade.
-          Todos os direitos
-          reservados.</p>
+          Todos os direitos reservados.</p>
         <p>Desenvolvido por <a href="https://github.com/luisfilipemendesnogueira" target="_blank"
-            style="font-weight: 700;">Luis Filipe</a>.</p>
+            style="font-weight: 700; color: var(--accent-lime);">Luis Filipe</a>.</p>
       </div>
     </div>
   </footer>
