@@ -230,6 +230,11 @@ img {
   position: relative;
   padding: 0.5rem 0;
   white-space: nowrap;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  text-align: left;
 }
 
 .nav-link:hover,
@@ -274,7 +279,7 @@ img {
   position: relative;
 
   /* --- Imagem de Fundo --- */
-  background-image: url('image.png');
+  background-image: url('/bg.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1293,12 +1298,21 @@ textarea.form-control {
   gap: 0.45rem;
 }
 
-.footer-links a {
+.footer-links a,
+.footer-links button {
   color: rgba(255, 255, 255, 0.75);
   font-size: 0.9rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  padding: 0;
+  text-align: left;
+  transition: all 0.2s ease;
 }
 
-.footer-links a:hover {
+.footer-links a:hover,
+.footer-links button:hover {
   color: var(--primary-light);
   padding-left: 4px;
 }
