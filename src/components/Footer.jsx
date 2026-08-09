@@ -7,8 +7,8 @@ export default function Footer() {
       <div className="container">
         <div className="footer-grid">
           <div className="footer-brand">
-            <a href="/" className="logo" onClick={(e) => handleScrollTo(e, 'inicio')}>
-              <img src="/logo.png" alt="Logo ATLIMARJOM" className="logo-icon" />
+            <a href="#" className="logo" onClick={(e) => handleScrollTo(e, 'inicio')}>
+              <img src="./logo.png" alt="Logo ATLIMARJOM" className="logo-icon" />
               <div>
                 ATLIMARJOM
                 <span className="logo-sub">João Monlevade - MG</span>
