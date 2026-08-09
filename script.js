@@ -4,18 +4,50 @@ document.addEventListener('DOMContentLoaded', () => {
     // ==========================================
     const mobileToggle = document.querySelector('.mobile-toggle');
     const navMenu = document.querySelector('.nav-menu');
+    const header = document.querySelector('.header');
 
     if (mobileToggle && navMenu) {
+        const toggleMenu = (open) => {
+            const isExpanded = open !== undefined ? open : !navMenu.classList.contains('active');
+            navMenu.classList.toggle('active', isExpanded);
+            mobileToggle.setAttribute('aria-expanded', isExpanded);
+            if (window.innerWidth <= 1024) {
+                document.body.style.overflow = isExpanded ? 'hidden' : '';
+            }
+        };
+
         // Abre e fecha o menu ao clicar no ícone hambúrguer
-        mobileToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
+        mobileToggle.addEventListener('click', (e) => {
+            e.stopPropagation();
+            toggleMenu();
         });
 
         // Fecha o menu ao clicar em qualquer item do menu
         document.querySelectorAll('.nav-link').forEach(link => {
             link.addEventListener('click', () => {
-                navMenu.classList.remove('active');
+                toggleMenu(false);
             });
+        });
+
+        // Fecha o menu ao clicar fora do cabeçalho
+        document.addEventListener('click', (e) => {
+            if (navMenu.classList.contains('active') && header && !header.contains(e.target)) {
+                toggleMenu(false);
+            }
+        });
+
+        // Fecha o menu ao pressionar ESC
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+                toggleMenu(false);
+            }
+        });
+
+        // Restaura a rolagem do body se a tela for redimensionada para desktop
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 1024 && navMenu.classList.contains('active')) {
+                toggleMenu(false);
+            }
         });
     }
 
