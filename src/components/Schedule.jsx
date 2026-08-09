@@ -3,67 +3,49 @@ import React, { useState } from 'react';
 const trucksData = [
   {
     id: 1,
-    title: 'CAMINHÃO 1',
-    route: 'Rota 01',
+    title: 'CAMINHÃO DE COLETA',
+    route: 'João Monlevade',
     headerClass: 'header-truck-1',
     days: [
       {
         day: 'SEGUNDA-FEIRA',
         dayClass: 'day-segunda',
-        neighborhoods: ['Areia Preta', 'Vila Tanque', 'Baú', 'Laranjeiras', 'Metalúrgico', 'Belmonte']
+        neighborhoods: [
+          'Areia Preta', 'Vila Tanque', 'Baú', 'Laranjeiras', 'Metalúrgico', 'Belmonte',
+          'Santo Hipólito', 'Teresópolis', 'Petrópolis', 'Nova Monlevade'
+        ]
       },
       {
         day: 'TERÇA-FEIRA',
         dayClass: 'day-terca',
-        neighborhoods: ['JK', 'Rosário', 'Mangabeiras', 'Vale do Sol', 'José Elói', 'São João', 'São Jorge', 'Castelo', 'São Benedito']
+        neighborhoods: [
+          'JK', 'Rosário', 'Mangabeiras', 'Vale do Sol', 'José Elói', 'São João', 'São Jorge', 'Castelo', 'São Benedito',
+          'Burian', 'Tanquinho 1', 'Tanquinho 2', 'Sion', 'Paineiras', 'Campos Elísios', 'Nova Esperança', 'Nova Aclimação', 'Cidade Nova', 'Boa Vista', 'Nova Cachoeirinha', 'Ponte Funda', 'Campo Alegre'
+        ]
       },
       {
         day: 'QUARTA-FEIRA',
         dayClass: 'day-quarta',
-        neighborhoods: ['Lucília', 'São Geraldo', 'Satélite de Baixo', 'Satélite de Cima', 'José de Alencar', 'Loanda', 'Vera Cruz', 'Palmares', 'ABM']
+        neighborhoods: [
+          'Lucília', 'São Geraldo', 'Satélite de Baixo', 'Satélite de Cima', 'José de Alencar', 'Loanda', 'Vera Cruz', 'Palmares', 'ABM',
+          'Estrela Dalva', 'Santa Cecília', 'Cruzeiro Celeste', '1º de Maio', 'Corumbiara de Vanessa', 'Monte Sagrado'
+        ]
       },
       {
         day: 'QUINTA-FEIRA',
         dayClass: 'day-quinta',
-        neighborhoods: ['Nossa Senhora da Conceição', 'Alvorada', 'Lourdes', 'República', 'Aclimação', 'Novo Horizonte']
+        neighborhoods: [
+          'Nossa Senhora da Conceição', 'Alvorada', 'Lourdes', 'República', 'Aclimação', 'Novo Horizonte',
+          'Centro Industrial', 'Santa Cruz', 'Amazonas', 'Jacuí', 'Serra do Egito', 'Pedreira', 'Santa Bárbara', 'Vale da Serra', 'Recanto Paraíso', 'Industrial', 'Ipiranga'
+        ]
       },
       {
         day: 'SEXTA-FEIRA',
         dayClass: 'day-sexta',
-        neighborhoods: ['Carneirinhos', 'Empresas']
-      }
-    ]
-  },
-  {
-    id: 2,
-    title: 'CAMINHÃO 2',
-    route: 'Rota 02',
-    headerClass: 'header-truck-2',
-    days: [
-      {
-        day: 'SEGUNDA-FEIRA',
-        dayClass: 'day-segunda',
-        neighborhoods: ['Santo Hipólito', 'Teresópolis', 'Petrópolis', 'Nova Monlevade']
-      },
-      {
-        day: 'TERÇA-FEIRA',
-        dayClass: 'day-terca',
-        neighborhoods: ['Burian', 'Tanquinho 1', 'Tanquinho 2', 'Sion', 'Paineiras', 'Campos Elísios', 'Nova Esperança', 'Nova Aclimação', 'Cidade Nova', 'Boa Vista', 'Nova Cachoeirinha', 'Ponte Funda', 'Campo Alegre']
-      },
-      {
-        day: 'QUARTA-FEIRA',
-        dayClass: 'day-quarta',
-        neighborhoods: ['Estrela Dalva', 'Santa Cecília', 'Cruzeiro Celeste', '1º de Maio', 'Corumbiara de Vanessa', 'Monte Sagrado']
-      },
-      {
-        day: 'QUINTA-FEIRA',
-        dayClass: 'day-quinta',
-        neighborhoods: ['Centro Industrial', 'Santa Cruz', 'Amazonas', 'Jacuí', 'Serra do Egito', 'Pedreira', 'Santa Bárbara', 'Vale da Serra', 'Recanto Paraíso', 'Industrial', 'Ipiranga']
-      },
-      {
-        day: 'SEXTA-FEIRA',
-        dayClass: 'day-sexta',
-        neighborhoods: ['Novo Cruzeiro', 'Ernestina Graciana', 'Promorar', 'Planalto']
+        neighborhoods: [
+          'Carneirinhos', 'Empresas',
+          'Novo Cruzeiro', 'Ernestina Graciana', 'Promorar', 'Planalto'
+        ]
       }
     ]
   }

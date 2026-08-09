@@ -926,9 +926,10 @@ img {
 /* Truck Cards Layout */
 .trucks-wrapper {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
+  max-width: 900px;
+  margin: 0 auto 2.5rem;
   gap: 2.5rem;
-  margin-bottom: 2.5rem;
 }
 
 .truck-card {
