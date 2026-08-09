@@ -219,7 +219,8 @@ img {
 .nav-menu {
   display: flex;
   align-items: center;
-  gap: 1.1rem;
+  gap: 1.25rem;
+  margin-left: auto;
 }
 
 .nav-link {
@@ -340,11 +341,12 @@ img {
   font-size: 1.7rem;
   font-weight: 800;
   color: var(--primary);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 }
 
 .stat-item p {
   font-size: 0.82rem;
-  color: var(--text-light);
+  color: white;
   font-weight: 500;
 }
 
@@ -474,6 +476,19 @@ img {
   box-shadow: var(--shadow-sm);
 }
 
+.about-card-bg .badge {
+  margin-bottom: 1rem;
+}
+
+.about-card-bg .section-title {
+  text-align: left;
+  margin-top: 0.5rem;
+}
+
+.about-card-bg p:first-of-type {
+  margin-bottom: 1.25rem;
+}
+
 .about-feature-list {
   display: flex;
   flex-direction: column;
@@ -537,6 +552,12 @@ img {
 /* ==========================================
    MATERIAIS RECICLÁVEIS
    ========================================== */
+.materials-section {
+  background-color: #F5F5F5;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
 .materials-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
@@ -614,7 +635,7 @@ img {
    NOTÍCIAS E ATUALIZAÇÕES
    ========================================== */
 .news-section {
-  background-color: var(--bg-subtle);
+  background-color: #F5F5F5;
   border-top: 1px solid var(--border-color);
   border-bottom: 1px solid var(--border-color);
 }
@@ -749,6 +770,13 @@ img {
   z-index: 2;
 }
 
+.badge-light {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  border: none;
+  margin-bottom: 1rem;
+}
+
 .support-content h2 {
   color: #ffffff;
   font-size: 2.2rem;
@@ -807,7 +835,7 @@ img {
    DIAS E BAIRROS DA COLETA (SCHEDULE)
    ========================================== */
 .schedule-section {
-  background-color: var(--bg-subtle);
+  background-color: #F5F5F5;
   border-top: 1px solid var(--border-color);
   border-bottom: 1px solid var(--border-color);
 }
@@ -850,8 +878,14 @@ img {
   border: 2px solid var(--border-color);
   border-radius: var(--radius-full);
   background-color: #ffffff;
+  color: var(--text-main);
   box-shadow: var(--shadow-sm);
   transition: var(--transition);
+}
+
+.neighborhood-search-input::placeholder {
+  color: #666666;
+  opacity: 1;
 }
 
 .neighborhood-search-input:focus {
@@ -1034,7 +1068,7 @@ img {
 
 /* Schedule Notice Banner */
 .schedule-notice-banner {
-  background: linear-gradient(135deg, #ffffff 0%, var(--bg-subtle) 100%);
+  background: #F5F5F5;
   border: 1px solid var(--border-color);
   border-left: 5px solid var(--primary);
   border-radius: var(--radius-md);
@@ -1080,10 +1114,20 @@ img {
   box-shadow: var(--shadow-sm);
 }
 
+.contact-card-title {
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+  color: var(--primary-dark);
+}
+
 .info-item {
   display: flex;
   gap: 1.25rem;
   margin-bottom: 2rem;
+}
+
+.info-item-last {
+  margin-bottom: 0;
 }
 
 .info-icon {
@@ -1121,6 +1165,10 @@ img {
   box-shadow: var(--shadow-sm);
 }
 
+.btn-full-width {
+  width: 100%;
+}
+
 .form-group {
   margin-bottom: 1.25rem;
 }
@@ -1144,6 +1192,11 @@ img {
   background-color: var(--bg-page);
   color: var(--text-main);
   transition: var(--transition);
+}
+
+.form-control::placeholder {
+  color: #666666;
+  opacity: 1;
 }
 
 .form-control:focus {
@@ -1185,6 +1238,36 @@ textarea.form-control {
   font-size: 0.9rem;
   margin-bottom: 1.5rem;
   max-width: 320px;
+}
+
+.footer-info-text {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9rem;
+  margin-bottom: 0.4rem;
+}
+
+.footer-info-mt {
+  margin-top: 0.75rem;
+}
+
+.footer-link-subtle {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.footer-link-highlight {
+  color: var(--accent-lime);
+  font-weight: 600;
+}
+
+.footer-email-text {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.88rem;
+  margin-top: 0.5rem;
+}
+
+.footer-author-link {
+  font-weight: 700;
+  color: var(--accent-lime);
 }
 
 .footer-title {
@@ -1292,6 +1375,7 @@ textarea.form-control {
 
 /* --- 3. IPADS & TABLETS (≤ 1024px) - ATIVAÇÃO DO MENU HAMBÚRGUER --- */
 @media (max-width: 1024px) {
+
   /* Ativação do Menu Hambúrguer */
   .mobile-toggle {
     display: flex;
@@ -1304,6 +1388,7 @@ textarea.form-control {
     padding: 0.5rem;
     border-radius: var(--radius-sm);
     transition: var(--transition);
+    margin-left: auto;
   }
 
   .mobile-toggle:hover {
@@ -1338,6 +1423,7 @@ textarea.form-control {
       opacity: 0;
       transform: translateY(-10px);
     }
+
     to {
       opacity: 1;
       transform: translateY(0);
