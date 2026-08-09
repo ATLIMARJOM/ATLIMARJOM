@@ -1,5 +1,6 @@
 import React from 'react';
 import { handleScrollTo } from '../utils/navigation';
+import logo from '../assets/logo.png';
 
 export default function Footer() {
   return (
@@ -8,7 +9,7 @@ export default function Footer() {
         <div className="footer-grid">
           <div className="footer-brand">
             <a href="#" className="logo" onClick={(e) => handleScrollTo(e, 'inicio')}>
-              <img src="./logo.png" alt="Logo ATLIMARJOM" className="logo-icon" />
+              <img src={logo} alt="Logo ATLIMARJOM" className="logo-icon" />
               <div>
                 ATLIMARJOM
                 <span className="logo-sub">João Monlevade - MG</span>

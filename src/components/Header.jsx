@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { handleScrollTo } from '../utils/navigation';
+import logo from '../assets/logo.png';
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -52,7 +53,7 @@ export default function Header() {
     <header className="header" ref={headerRef}>
       <div className="container nav-container">
         <a href="#" className="logo" onClick={(e) => navClick(e, 'inicio')}>
-          <img src="./logo.png" alt="Logo ATLIMARJOM" className="logo-icon" />
+          <img src={logo} alt="Logo ATLIMARJOM" className="logo-icon" />
           <div className="logo-text">
             ATLIMARJOM
             <span className="logo-sub">João Monlevade - MG</span>
