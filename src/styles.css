@@ -682,8 +682,20 @@ img {
 
 .news-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
+}
+
+@media (max-width: 1024px) {
+  .news-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .news-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .news-card {
@@ -779,6 +791,115 @@ img {
 .news-read-more:hover {
   color: var(--primary-dark);
   gap: 0.6rem;
+}
+
+/* ==========================================
+   NEWS CAROUSEL CONTROLS & DOTS
+   ========================================== */
+.news-carousel-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.news-carousel-container {
+  flex: 1;
+  overflow: hidden;
+  user-select: none;
+  cursor: grab;
+  touch-action: pan-y;
+}
+
+.news-carousel-container:active {
+  cursor: grabbing;
+}
+
+.news-slider-track {
+  display: flex;
+  width: 100%;
+  will-change: transform;
+}
+
+.news-page {
+  flex: 0 0 100%;
+  min-width: 100%;
+}
+
+.carousel-btn {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  color: var(--primary);
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  flex-shrink: 0;
+  z-index: 2;
+}
+
+.carousel-btn:hover:not(:disabled) {
+  background: var(--primary);
+  color: #ffffff;
+  border-color: var(--primary);
+  transform: scale(1.08);
+  box-shadow: var(--shadow-md);
+}
+
+.carousel-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.news-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 2rem;
+}
+
+.news-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--primary-light);
+  border: 1px solid rgba(30, 172, 8, 0.35);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.news-dot.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  width: 28px;
+  border-radius: 12px;
+}
+
+.news-dot:hover:not(.active) {
+  background: var(--accent-lime);
+  border-color: var(--primary-medium);
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .news-carousel-wrapper {
+    flex-direction: column;
+  }
+
+  .news-carousel-nav-mobile {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+  }
 }
 
 /* ==========================================

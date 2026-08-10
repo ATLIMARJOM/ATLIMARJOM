@@ -1,0 +1,22 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "public/uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: "noticias"
+    label: "Notícias e Comunicados"
+    folder: "src/content/noticias"
+    extension: "json"
+    format: "json"
+    create: true
+    slug: "{{day}}-{{month}}-{{year}}-{{slug}}"
+    fields:
+      - { label: "Título da Notícia", name: "title", widget: "string" }
+      - { label: "Tag / Categoria", name: "tag", widget: "string", default: "Informativo" }
+      - { label: "Data de Publicação", name: "date", widget: "datetime", format: "DD/MM/YYYY", date_format: "DD/MM/YYYY", time_format: false }
+      - { label: "Imagem da Notícia", name: "image", widget: "image", required: false }
+      - { label: "Link Externo / URL da Notícia", name: "link", widget: "string", required: false }
+      - { label: "Resumo (Chamada)", name: "excerpt", widget: "text" }
