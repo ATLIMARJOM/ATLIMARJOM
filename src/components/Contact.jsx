@@ -39,7 +39,7 @@ export default function Contact() {
       })
       .catch((error) => {
         alert(
-          'Ocorreu um erro ao enviar a mensagem. Por favor, tente novamente ou envie um e-mail direto para luisfilipe1000.lf@gmail.com.'
+          'Ocorreu um erro ao enviar a mensagem. Por favor, tente novamente ou envie um e-mail direto para atlimarjom@catavales.com.br.'
         );
         console.error('Erro no envio do formulário:', error);
       })
@@ -109,7 +109,7 @@ export default function Contact() {
               <div className="info-text">
                 <h4>E-mail</h4>
                 <p>
-                  <a href="mailto:luisfilipe1000.lf@gmail.com">luisfilipe1000.lf@gmail.com</a>
+                  <a href="mailto:atlimarjom@catavales.com.br">atlimarjom@catavales.com.br</a>
                 </p>
               </div>
             </div>

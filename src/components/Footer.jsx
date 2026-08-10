@@ -74,7 +74,7 @@ export default function Footer() {
               <a href="https://wa.me/5531987630181" target="_blank" rel="noopener noreferrer" className="footer-link-highlight"> (31) 98763-0181</a>
             </p>
             <p className="footer-email-text">
-              <a href="mailto:luisfilipe1000.lf@gmail.com" className="footer-link-subtle">luisfilipe1000.lf@gmail.com</a>
+              <a href="mailto:atlimarjom@catavales.com.br" className="footer-link-subtle">atlimarjom@catavales.com.br</a>
             </p>
           </div>
         </div>
