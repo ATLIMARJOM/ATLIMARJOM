@@ -15,8 +15,8 @@ collections:
     slug: "{{day}}-{{month}}-{{year}}-{{slug}}"
     fields:
       - { label: "Título da Notícia", name: "title", widget: "string" }
-      - { label: "Tag / Categoria", name: "tag", widget: "string", default: "Informativo" }
+      - { label: "Nome do Site da Notícia", name: "tag", widget: "string", default: "Jornal X" }
       - { label: "Data de Publicação", name: "date", widget: "datetime", format: "DD/MM/YYYY", date_format: "DD/MM/YYYY", time_format: false }
       - { label: "Imagem da Notícia", name: "image", widget: "image", required: false }
       - { label: "Link Externo / URL da Notícia", name: "link", widget: "string", required: false }
-      - { label: "Resumo (Chamada)", name: "excerpt", widget: "text" }
+      - { label: "Resumo", name: "excerpt", widget: "text", pattern: ['^[\s\S]{1,250}$', 'O resumo deve ter no máximo 250 caracteres.'] }
